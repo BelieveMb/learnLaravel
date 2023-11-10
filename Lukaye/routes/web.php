@@ -22,4 +22,16 @@ Route::prefix('lukaye')->name('lukaye.')->group(function(){
     Route::get('/home', function (){
         return view('/users/home');
     });
+    Route::get('/sign', function (){
+        return view('/users/sign');
+    });
+    //la route de l'inscription
+    Route::get('/login', function (){
+        return view('/users/login');
+    });
+    //la route de la connexion
+    Route::get('/listUsers', function (){
+        return view('/users/listUsers');
+    });
+    //la route de la liste des inscrits
 });

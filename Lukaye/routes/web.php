@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\Counter;
+use app\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
  
-Route::get('/counter', Counter::class);
+// Route::get('/counter', function(){
+//     return view('livewire.counter');
+// });
 
 Route::prefix('lukaye')->name('lukaye.')->group(function(){
     Route::get('/home', function (){

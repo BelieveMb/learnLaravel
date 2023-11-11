@@ -21,15 +21,15 @@
     </div>
     <nav :class="{'flex': open, 'hidden': !open}"
       class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->routeIs('lukaye.index') ? 'bg-red-500' : '' }} "
+      <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->routeIs('lukaye.index') ? 'bg-gray-300' : '' }}"
         href="{{ route('lukaye.index') }}">Home</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold  rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline  {{ request()->routeIs('lukaye.signUpName') ? 'bg-gray-500' : '' }}"
+      <a class="px-4 py-2 mt-2 text-sm font-semibold  rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline  {{ request()->routeIs('lukaye.signUpName') ? 'bg-gray-300' : '' }}"
         href="{{ route('lukaye.signUpName') }}">Inscription</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->routeIs('lukaye.listUsersName') ? 'bg-red-500' : '' }}"
+      <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->routeIs('lukaye.listUsersName') ? 'bg-gray-300' : '' }}"
         href="{{ route('lukaye.listUsersName') }}">Users</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+      <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
         href="">Contact</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-900 text-gray-200 rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->routeIs('lukaye.loginName') ? 'bg-red-500' : '' }}"
+      <a class=" {{ request()->routeIs('lukaye.loginName') ? 'bg-gray-300' : 'bg-gray-900' }} px-4 py-2 mt-2 text-sm font-semibold  text-gray-200 rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline "
         href="{{ route('lukaye.loginName') }}">Login</a>
 
     </nav>

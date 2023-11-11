@@ -6,6 +6,7 @@
     <title>Bienvenu à Lukaye</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="../../css/app.css">
 
 </head>
 <body>

@@ -9,6 +9,10 @@
   @include('users.header')
 
   <main class="bg-gray-400">
+
+    <div class="bg-image" style="background-image: url('{{ $bgImage }}');">
+    <h2>Jins</h2>
+    </div>
     <div class="flex justify-between gap-5">
       <h2>Body</h2>
 

@@ -21,7 +21,7 @@ class SignUpController extends Controller
     public function login(){
         return view("users.login");
     }
-    public function listUser(){
+    public function listUsers(){
         return view("users.listUsers");
     }
 

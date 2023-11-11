@@ -6,13 +6,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  @include('users.header');
+  @include('users.header')
 
-  <div class="flex justify-between gap-5">
-    <h2>Body</h2>
+  <main class="bg-gray-400">
+    <div class="flex justify-between gap-5">
+      <h2>Body</h2>
 
-  </div>
+    </div>
 
+  </main>
 
 </body>
 </html>

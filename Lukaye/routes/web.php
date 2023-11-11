@@ -29,10 +29,8 @@ Route::prefix('lukaye')->name('lukaye.')->controller(SignUpController::class)->g
     //la route de l'inscription
 
     Route::get('/login', 'login')->name('loginName');
-    Route::get('/listUsers', 'listUser')->name('listUsersName');
     //la route de la connexion
-    Route::get('/listUsers', function (){
-        return view('/users/listUsers');
-    });
+
+    Route::get('/listUsers', 'listUsers')->name('listUsersName');
     //la route de la liste des inscrits
 });

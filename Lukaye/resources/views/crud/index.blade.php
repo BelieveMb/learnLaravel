@@ -12,19 +12,30 @@
             <div class="col-md-6 col-md-offset">
                 <h2 class="mb-6">Add a new record </h2>
                 <form action="add" method="post"> 
+
+                    @csrf
                     <div class="form-group">
                         <label for="">Name </label>
                         <input type="text" class="form-control" name="name">
+                        <span class="bg-danger text-white">@error('name')
+                            {{$message}}
+                        @enderror</span>
                     </div>
 
                     <div class="form-group">
                         <label for="">Favorite color </label>
                         <input type="text" class="form-control" name="favoriteColor">
+                        <span class="bg-danger text-white">@error('favoriteColor')
+                            {{$message}}
+                        @enderror</span>
                     </div>
 
                     <div class="form-group">
                         <label for="">Email </label>
                         <input type="text" class="form-control" name="email">
+                        <span class="bg-danger text-white">@error('email')
+                            {{$message}}
+                        @enderror</span>
                     </div>
 
                     <div class="form-group">

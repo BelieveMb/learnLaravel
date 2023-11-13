@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('crud', [laravelCrud::class, 'index']);
+Route::post('add', [laravelCrud::class, 'add']);
 
 Route::get('/', function () {
     return view('welcome');

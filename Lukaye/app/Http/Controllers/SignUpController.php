@@ -17,9 +17,9 @@ class SignUpController extends Controller
         // $cars = DB::select('select * from voiture ');
         // return view('users.listUsers', ['users' => $cars]);
         // 'properties' =>  Property::orderBy('created_at', 'desc')->paginate(1)
-        return view('users.home', [
-            'cars' =>  User::orderBy('created_at', 'desc')->paginate(1)
-        ]);
+        
+        $voitures = DB::select('SELECT * FROM voiture');
+        return view('users.home', compact('voitures'));
 
     }
 

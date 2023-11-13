@@ -33,4 +33,7 @@ Route::prefix('lukaye')->name('lukaye.')->controller(SignUpController::class)->g
 
     Route::get('/listUsers', 'listUsers')->name('listUsersName');
     //la route de la liste des inscrits
+
+    Route::get('/connexion', 'connexion')->name('connexionName');
+    //la route de la connexion or inscription
 });

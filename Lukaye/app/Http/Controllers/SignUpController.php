@@ -2,14 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class SignUpController extends Controller
 {
    
     public function index()
     {
-        return view("users.home");
+        // return view("users.home");
+        // $users = DB::select('select * from users where active = ?', [1]);
+        // $cars = DB::select('select * from voiture ');
+        // return view('users.listUsers', ['users' => $cars]);
+        // 'properties' =>  Property::orderBy('created_at', 'desc')->paginate(1)
+        return view('users.home', [
+            'cars' =>  User::orderBy('created_at', 'desc')->paginate(1)
+        ]);
+
     }
 
     
@@ -22,7 +33,11 @@ class SignUpController extends Controller
         return view("users.login");
     }
     public function listUsers(){
+        
         return view("users.listUsers");
+    }
+    public function connexion(){
+        return view("users.connexion");
     }
 
 

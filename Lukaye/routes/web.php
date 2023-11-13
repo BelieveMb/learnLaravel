@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\laravelCrud;
 use App\Http\Controllers\SignUpController;
 use app\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('crud', [laravelCrud::class, 'index']);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,18 +26,18 @@ Route::get('/', function () {
 //     return view('livewire.counter');
 // });
 
-Route::prefix('lukaye')->name('lukaye.')->controller(SignUpController::class)->group(function(){
-    Route::get('/home', 'index')->name('index');
+// Route::prefix('lukaye')->name('lukaye.')->controller(SignUpController::class)->group(function(){
+//     Route::get('/home', 'index')->name('index');
     
-    Route::get('/signUp', 'create')->name('signUpName');
-    //la route de l'inscription
+//     Route::get('/signUp', 'create')->name('signUpName');
+//     //la route de l'inscription
 
-    Route::get('/login', 'login')->name('loginName');
-    //la route de la connexion
+//     Route::get('/login', 'login')->name('loginName');
+//     //la route de la connexion
 
-    Route::get('/listUsers', 'listUsers')->name('listUsersName');
-    //la route de la liste des inscrits
+//     Route::get('/listUsers', 'listUsers')->name('listUsersName');
+//     //la route de la liste des inscrits
 
-    Route::get('/connexion', 'connexion')->name('connexionName');
-    //la route de la connexion or inscription
-});
+//     Route::get('/connexion', 'connexion')->name('connexionName');
+//     //la route de la connexion or inscription
+// });

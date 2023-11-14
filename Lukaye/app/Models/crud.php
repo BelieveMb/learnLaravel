@@ -9,5 +9,5 @@ class crud extends Model
 {
     use HasFactory;
     protected $table = 'crud';
-
+    //préciser la table de sélection
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\etudiant;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,8 +34,9 @@ class SignUpController extends Controller
         return view("users.login");
     }
     public function listUsers(){
-        
-        return view("users.listUsers");
+        $etudiant = etudiant::all();
+        return view("users.listUsers", ['etudiant' => $etudiant]);
+        //ce code signifie que je récupère toutes les données de la table etudiant et je les passe dans la vue listUsers
     }
     public function connexion(){
         return view("users.connexion");

@@ -35,8 +35,8 @@ class SignUpController extends Controller
         return view("users.login");
     }
     public function listUsers(){
-        // $clients = client::paginate(6);
-        return view("users.listUsers", client::paginate(6));
+        $clients = client::paginate(6);
+        return view("users.listUsers", $clients );
         // return view("users.listUsers", ['client' => $clients]);
         //ce code signifie que je récupère toutes les données de la table client et je les passe dans la vue listUsers
     }

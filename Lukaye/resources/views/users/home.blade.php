@@ -13,9 +13,7 @@
  
     <div class="flex justify-between gap-5">
       <h2>Body</h2>
-      @foreach ($voitures as $voiture)
-          <p>{{ $voiture->marque }} - {{ $voiture->modele }}</p>
-      @endforeach
+      
     </div>
 
   </main>

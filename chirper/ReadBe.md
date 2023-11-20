@@ -11,3 +11,9 @@
     nous suffit donc de démarrer le serveur de développement Vite pour
     recompiler automatiquement notre CSS et actualiser le navigateur lorsque
     nous apportons des modifications à nos modèles Blade : npm run dev
+4. Modèles, migrations et contrôleurs
+    Pour permettre aux utilisateurs de publier des Chirps, nous devrons créer
+    des modèles, des migrations et des contrôleurs.
+     ->php artisan make:model -mrc Chirp Vous pouvez voir toutes les options disponibles en exécutant la php artisan make:model --helpcommande.
+5. Routage
+Nous devrons également créer des URL pour notre contrôleur. Nous pouvons le faire en ajoutant des "routes", qui sont gérées dans le routesrépertoire de votre projet

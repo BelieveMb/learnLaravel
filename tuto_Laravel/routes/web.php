@@ -27,7 +27,7 @@ Route::get('/test', function(){
 Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
 Route::delete('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/login', [AuthController::class, 'doLogin']); //une route pour gérer le formulaire
-//un middleware middleware(auth)->lire doc et modifier authentificate.php pour
+//un middleware middleware(auth)->lire doc et modifier authentificate.php pou
 //la redirection 
 //les routes sont definie dans le fichier web.php de la maniere suivante
 

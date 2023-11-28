@@ -1,7 +1,7 @@
 @extends ('admin.admin')
 
 @section('title', $property->exists ? "Editer un bien" : "Créer un bien")
-<!-- on vérifie si property exite alors... -->
+<!-- on vérifie si property exite  alors... -->
 
 @section('content')
 <div class="flex justify-between">

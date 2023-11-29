@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('chirps', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // ça signifie que l'id de la table user sera lié à l'id de la table chirps
+            $table->string('message'); 
             $table->timestamps();
         });
     }

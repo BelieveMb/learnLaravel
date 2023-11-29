@@ -15,3 +15,7 @@ artisan make:controller leNomduController
 ## web
 1. on lui trace une route dans web
 2. on lui trace une route dans web mais avec la method post
+
+
+## Auth manuelle
+1. 

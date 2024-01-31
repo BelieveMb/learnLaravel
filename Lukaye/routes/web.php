@@ -23,9 +23,9 @@ Route::get('/', function () {
     return view('welcome');
 });
  
-// Route::get('/counter', function(){
-//     return view('livewire.counter');
-// });
+//chat
+Route::get('/chat', 'ChatController@index')->middleware('auth');
+Route::post('/send-message', 'ChatController@sendMessage')->middleware('auth');
 
 Route::prefix('lukaye')->name('lukaye.')->controller(SignUpController::class)->group(function(){
     Route::get('/home', 'index')->name('index');

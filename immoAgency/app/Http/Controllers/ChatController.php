@@ -23,6 +23,7 @@ class ChatController extends Controller
             'listUsers' => $listUsers,
             'usersOnline' => $usersOnline
         ]);
+        //le reste à faire ce de test le chat
     }
     public function messageblade(Request $request){
         $path = $request->path(); // Obtient le chemin de l'URL, par exemple "chat/8"

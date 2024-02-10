@@ -31,7 +31,7 @@
                 <div class="messenger-favorites app-scroll-hidden"></div>
                </div>
                {{-- Saved Messages --}}
-               <p class="messenger-title"><span>Your Space</span></p>
+               <p class="messenger-title"><span>Mon espace</span></p>
                {!! view('Chatify::layouts.listItem', ['get' => 'saved']) !!}
                {{-- Contact --}}
                <p class="messenger-title"><span>All Messages</span></p>
@@ -40,9 +40,9 @@
              {{-- ---------------- [ Search Tab ] ---------------- --}}
            <div class="messenger-tab search-tab app-scroll" data-view="search">
                 {{-- items --}}
-                <p class="messenger-title"><span>Search</span></p>
+                <p class="messenger-title"><span>Recherche</span></p>
                 <div class="search-records">
-                    <p class="message-hint center-el"><span>Type to search..</span></p>
+                    <p class="message-hint center-el"><span>Tapez pour chercher..</span></p>
                 </div>
              </div>
         </div>
@@ -78,7 +78,7 @@
         {{-- Messaging area --}}
         <div class="m-body messages-container app-scroll">
             <div class="messages">
-                <p class="message-hint center-el"><span>Please select a chat to start messaging</span></p>
+                <p class="message-hint center-el"><span>Selectionner une discussion pour commencer</span></p>
             </div>
             {{-- Typing indicator --}}
             <div class="typing-indicator">

@@ -8,9 +8,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use BasementChat\Basement\Contracts\User as BasementUserContract;
+use BasementChat\Basement\Traits\HasPrivateMessages;
 
-class User extends Authenticatable
+// class User extends Authenticatable
+// {
+class User extends Authenticatable implements BasementUserContract
 {
+    use HasPrivateMessages;
     use HasApiTokens, HasFactory, Notifiable;
 
    

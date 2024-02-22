@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewMessageEvent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -41,7 +42,7 @@ class ChatController extends Controller
             ->where('id', '!=', $idpatient)
             ->get();
         $path = $request->path(); 
-        $message = $request->input('message');
+        $messageInput = $request->input('message');
 
         $usersOnline = DB::table('users')
             ->where('id', $idpatient)
@@ -59,12 +60,32 @@ class ChatController extends Controller
                 ->first();
         }
 
-        if(!empty($message)){
-            DB::table('chatkak')->insert([
+        // if(!empty($messageInput)){
+        //     DB::table('chatkak')->insert([
+        //         'idpatient' => $idpatient,
+        //         'idmedecin' => $idUrl,
+        //         'message' => $messageInput,
+        //     ]);
+            
+        // }
+        if (!empty($messageInput)) {
+            // Insérer le nouveau message dans la base de données
+            $newMessage = DB::table('chatkak')->insert([
                 'idpatient' => $idpatient,
                 'idmedecin' => $idUrl,
-                'message' => $message,
+                'message' => $messageInput,
+                'patientMsg' => "true",
             ]);
+        
+            // Vérifier si l'insertion s'est bien déroulée
+            if ($newMessage) {
+                // Récupérer le message inséré
+                $message = DB::table('chatkak')
+                    ->latest()
+                    ->first();
+                // Déclencher l'événement personnalisé pour informer les clients via les WebSockets
+                // event(new NewMessageEvent($newMessage));
+            }
         }
        
         return view('chat.home', [
